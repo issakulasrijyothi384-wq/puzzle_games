@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cute Ultimate Puzzle 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  🥇 Best Moves: <span id="bestMoves">--</span>
+  <div class="coinsBox">
+    🪙 Coins: <span id="coins">0</span>
+  </div>
+</div>
+
+<h1>🧩 Cute Ultimate Puzzle Game 💕</h1>
+
+<img id="previewImage">
+
+<div class="controls">
+  <input type="file" id="imageUpload" accept="image/*">
+
+  <select id="difficulty">
+    <option value="3">3x3</option>
+    <option value="4">4x4</option>
+    <option value="5">5x5</option>
+    <option value="6">6x6</option>
+    <option value="7">7x7</option>
+    <option value="8">8x8</option>
+    <option value="9">9x9</option>
+  </select>
+
+  <select id="shape">
+    <option value="square">Square</option>
+    <option value="rounded">Rounded</option>
+    <option value="circle">Circle</option>
+    <option value="cross">Cross</option>
+  </select>
+
+  <button onclick="createPuzzle()">Start</button>
+  <button onclick="resetGame()">Reset</button>
+  <button onclick="toggleDarkMode()">🌙 Dark</button>
+</div>
+
+<div class="stats">
+  ⏳ Time: <span id="timer">0</span>s |
+  🔢 Moves: <span id="moves">0</span>
+</div>
+
+<div id="puzzleContainer"></div>
+
+<h2 id="message"></h2>
+<button id="nextBtn" onclick="nextGame()" style="display:none;">➡️ Next Puzzle</button>
+
+<audio id="moveSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+<audio id="winSound" src="https://www.soundjay.com/human/sounds/applause-8.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
